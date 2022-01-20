@@ -5,9 +5,9 @@
 * ```pipenv shell```
 * ```python server.py```
 ### project structure
-| routs                                              | Funtions    | return                      |
-|----------------------------------------------------|-------------|-----------------------------|
-| Localhost:5000/                                    | hola        | "Hello World!"              |
-| Localhost:5000/dojo                                | dojo        | "Dojo!"                     |
-| localhost:5000/say/<string:name>                   | show_string | "Hello {name}!"             |
-| localhost:5000/repeat/<int:number>/<string:string> | repeat      | "'{string}' {number} times" |
+| routs                                              | Funtions          | return                                             |
+|----------------------------------------------------|-------------------|----------------------------------------------------|
+| Localhost:5000/                                    | hola              | "hola mundo"                                       |
+| Localhost:5000/play                                | play              | render_template("index.html", num=3)               |
+| localhost:5000/play/```<int:num>```                | play_number       | render_tempalte("index.html", num=num)             |
+| localhost:5000/play/```<int:num>/<string:color>``` | play_number_color | render_template("index.html", num=num, color=color |
