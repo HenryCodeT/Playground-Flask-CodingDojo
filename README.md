@@ -5,9 +5,10 @@
 * ```pipenv shell```
 * ```python server.py```
 ### project structure
-| routs                                              | Funtions          | return                                             |
-|----------------------------------------------------|-------------------|----------------------------------------------------|
-| Localhost:5000/                                    | hola              | "hola mundo"                                       |
-| Localhost:5000/play                                | play              | render_template("index.html", num=3)               |
-| localhost:5000/play/```<int:num>```                | play_number       | render_tempalte("index.html", num=num)             |
-| localhost:5000/play/```<int:num>/<string:color>``` | play_number_color | render_template("index.html", num=num, color=color |
+| routs | Funtions | return |
+|---|---|---|
+| Localhost:5000/ | init_checkerboard() | render_template("index.html",number_rows=8, number_colums=8,color1="black",color2="red") |
+| Localhost:5000/```rows``` | hange_rows(rows) | render_template("index.html",number_rows=rows, number_colums=8,color1="black",color2="red") |
+| localhost:5000/```rows/colums``` | change_rows_colums(rows,colums) | render_template("index.html",number_rows=rows, number_colums=colums,color1="black",color2="red") |
+| localhost:5000/```/rows/colums/color1``` | change_rows_colums_color(rows,colums,color1) | render_template("index.html",number_rows=rows, number_colums=colums,color1=color1,color2="red") |
+| localhost:5000/```/rows/colums/color1/color2``` | hange_rows_colums_colors(rows,colums,color1,color2) | render_template("index.html",number_rows=rows, number_colums=colums,color1=color1,color2=color2) |
